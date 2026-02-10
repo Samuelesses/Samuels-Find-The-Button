@@ -21,10 +21,10 @@ public class Sequence2 : MonoBehaviour
         yield return new WaitForSeconds(4f);
         Subtitle.text = "All you have to do is find and press the button, easy enough?";
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(30);
         Subtitle.text = "Greg, you've been searching for a while? No luck? Let me have a look..";
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
         Subtitle.text = "Ahh Greg, you won't believe this! I forgot to put the button in... Let's try again.";
         MainButton.SetActive(true);
     }

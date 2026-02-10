@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6339996964041629514}
   - component: {fileID: 3391878744422146337}
   - component: {fileID: 7841920322680732371}
+  - component: {fileID: 8637889038559655956}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -213,6 +214,22 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &8637889038559655956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358670022402022899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5158c1b07918d4bb062d346e404e07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistance: 4
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6133719731745771589
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +358,7 @@ MonoBehaviour:
   speed: 5
   mouseSensitivity: 2
   movementEnabled: 0
+  jumpForce: 5
 --- !u!54 &8433550946223107212
 Rigidbody:
   m_ObjectHideFlags: 0
