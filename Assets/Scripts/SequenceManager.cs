@@ -87,8 +87,7 @@ public class SequenceManager : MonoBehaviour
 
         if (greenButtonPressed)
         {
-            audio1.Play();
-            Subtitle.text = "I KNEW you were impatient! But that's okay.";
+            Subtitle.text = "";
             yield return new WaitForSeconds(10f);
         }
 
