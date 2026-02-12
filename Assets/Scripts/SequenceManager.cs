@@ -49,7 +49,7 @@ public class SequenceManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         MicWarning.SetActive(true);
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(3f);
         audio3.Play();
         Subtitle.text = "I've just remembered. I don't really care.";
 

@@ -603,6 +603,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4527975780414923469, guid: d1356b14ca5214a4688c31b0a43c2bc7, type: 3}
+      propertyPath: movementEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6133719731745771589, guid: d1356b14ca5214a4688c31b0a43c2bc7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -948,7 +952,7 @@ GameObject:
   - component: {fileID: 648930708}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

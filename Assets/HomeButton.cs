@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Button3 : MonoBehaviour
+public class HomeButton : MonoBehaviour
 {
     void OnClicked()
     {
-        SceneManager.LoadScene("End");
+        SceneManager.LoadScene("Level 1");
     }
 }
