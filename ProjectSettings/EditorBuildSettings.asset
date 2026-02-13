@@ -16,10 +16,16 @@ EditorBuildSettings:
     guid: 9c191473acdeab244ac6f1e9401a1b58
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
-    guid: 6919efe4828e945479d5d117f54b8674
+    guid: 3b59ee3d94ada5b47923624d2952a2ee
   - enabled: 1
     path: Assets/Scenes/The Real Ending.unity
     guid: 040bf899cc53f814aa104085d97aaf6a
+  - enabled: 1
+    path: Assets/Scenes/The Leg Ending.unity
+    guid: b1a309abe0ae023419e9a278fbecc42e
+  - enabled: 1
+    path: Assets/Scenes/The Found Legs.unity
+    guid: 6aebbb142f040134686ff872eda19163
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

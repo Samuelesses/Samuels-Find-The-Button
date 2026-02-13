@@ -5,6 +5,6 @@ public class Button3 : MonoBehaviour
 {
     void OnClicked()
     {
-        SceneManager.LoadScene("End");
+        SceneManager.LoadScene("The Real Ending");
     }
 }

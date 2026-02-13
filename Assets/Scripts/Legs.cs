@@ -1,18 +1,83 @@
-using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Legs : MonoBehaviour
 {
-    [Range(0.7f, 1f)]
-    public float threshold = 0.9f;
+    public AudioSource audio1;
+    public AudioSource audio2;
+    public AudioSource audio3;
 
-    void Update()
+    public float requiredTime = 1f;
+    public float angleThreshold = 15f;
+
+    void Start()
     {
-        float currentX = transform.eulerAngles.x;
+        StartCoroutine(PlaySequence());
+    }
 
-        if (Mathf.Abs(currentX - 90f) < 1f)
+    IEnumerator PlaySequence()
+    {
+        yield return WaitForLookDown(requiredTime);
+        audio1.Play();
+
+        yield return WaitForLookUp(requiredTime);
+
+        yield return WaitForLookDown(requiredTime);
+        audio2.Play();
+
+        yield return WaitForLookUp(requiredTime);
+
+        yield return WaitForLookDown(requiredTime);
+        audio3.Play();
+
+        yield return WaitForLookUp(requiredTime);
+
+        yield return WaitForLookDown(requiredTime);
+        SceneManager.LoadScene("The Leg Ending");
+    }
+
+    IEnumerator WaitForLookDown(float duration)
+    {
+        float timer = 0f;
+
+        while (timer < duration)
         {
-            Debug.Log("cam done it");
+            if (IsLookingDown())
+                timer += Time.deltaTime;
+            else
+                timer = 0f;
+
+            yield return null;
         }
+    }
+
+    IEnumerator WaitForLookUp(float duration)
+    {
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            if (IsLookingUp())
+                timer += Time.deltaTime;
+            else
+                timer = 0f;
+
+            yield return null;
+        }
+    }
+
+    bool IsLookingDown()
+    {
+        float x = transform.eulerAngles.x;
+        if (x > 180f) x -= 360f;
+        return Mathf.Abs(x - 90f) < angleThreshold;
+    }
+
+    bool IsLookingUp()
+    {
+        float x = transform.eulerAngles.x;
+        if (x > 180f) x -= 360f;
+        return Mathf.Abs(x) < angleThreshold;
     }
 }

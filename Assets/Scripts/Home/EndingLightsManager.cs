@@ -5,7 +5,7 @@ public class EndingLightsManager : MonoBehaviour
     public ProgressManager progressManager;
 
     public GameObject theFoundLegsParent;
-    public GameObject wrongEndingLightsParent;
+    public GameObject realEndingLightsParent;
     public GameObject legEndingLightsParent;
 
     void Start()
@@ -16,7 +16,7 @@ public class EndingLightsManager : MonoBehaviour
         }
 
         UpdateLights(theFoundLegsParent, "The Found Legs");
-        UpdateLights(wrongEndingLightsParent, "The Wrong Ending");
+        UpdateLights(realEndingLightsParent, "The Real Ending");
         UpdateLights(legEndingLightsParent, "The Leg Ending");
     }
 

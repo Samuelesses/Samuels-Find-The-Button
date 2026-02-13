@@ -130,33 +130,42 @@ public class SequenceManager : MonoBehaviour
 
     public void OnRedButtonPressed()
     {
-        greenButtonPressed = true;
-        SceneManager.LoadScene("Level 2");
-    }
+        if (playingAltScene) return;
 
-    public void OnMainButtonPressed()
-    {
-        if (playingAltScene)
-        {
-            return;
-        }
 
-        if (!readyForMainButton && !altScene)
+        if (!readyForMainButton)
         {
             StartCoroutine(PlayAltScene());
         }
-        else if (readyForMainButton || altScene)
+
+        else
         {
             SceneManager.LoadScene("Level 2");
         }
     }
 
+    public void OnMainButtonPressed()
+    {
+
+        if (playingAltScene) return;
+
+
+        if (!readyForMainButton)
+        {
+            StartCoroutine(PlayAltScene());
+        }
+
+        else
+        {
+            SceneManager.LoadScene("Level 2");
+        }
+    }
+
+
     IEnumerator PlayAltScene()
     {
         altScene = true;
         playingAltScene = true;
-        audio1.Play();
-        Subtitle.text = "I said when you're READY!";
         
         yield return new WaitForSeconds(3f);
         
